@@ -526,9 +526,9 @@
                 const cardTitle = document.createElement('h4')
                 const titleText = document.createTextNode('No results found !!!');
                 cardTitle.appendChild(titleText);
-                noRes.classList.add('d-flex', 'flex-column','align-items-center','justify-content-center')
-                noRes.appendChild(cardTitle)
-                noRes.appendChild(imgTag)
+                noResltContainer.classList.add('d-flex', 'flex-column','align-items-center','justify-content-center')
+                noResltContainer.appendChild(cardTitle)
+                noResltContainer.appendChild(imgTag)
                 container.appendChild(noResltContainer)
             }
         });

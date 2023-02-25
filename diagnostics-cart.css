@@ -148,7 +148,8 @@ body{
         width:40%;
         margin-right: 5rem;
         margin-block: 2vh;
-        background: white;
+        background: var(--col2);
+        color: var(--bg-color);
         text-align: center;
         box-shadow: 0.5rem -0.5rem 0 black;
     }
