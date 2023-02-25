@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    --bg-color: #F7FFF7;
+    --bg-elements: #EE6C4D;
+    --col1: #98C1D9;
+    --col2: #293241;
+    --font: 'Lato', sans-serif;
+}
+
+body{
+    font-family: var(--font);
+    background: var(--col1);
+}
+
+
+.brand-title a{
+    font-size: 3rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    font-family: 'Itim', cursive;
+}
+
+.services{
+    width:90vw;
+    max-width: 900px;
+    margin-inline: auto;
+    margin-block: 10vh;
+}
+
+.card{
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    background-color: var(--col2);
+    color: var(--bg-color);
+    margin-block: 3vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-basis: 0;
+    align-items: center;
+}
+
+.head{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.body{
+    font-size: 1rem;
+}
+
+.card>span{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: var(--bg-color);
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.card>span:hover{
+    box-shadow: 0px 0px 10px blue;
+}
+.add{
+    background-color: green;
+    padding: 0.5rem 1.3rem;
+}
+
+.remove{
+    background-color: red;
+    padding: 0.5rem;
+}
+
+/* ---------------------CART-------------------------------- */
+
+.cart{
+    width:90vw;
+    max-width: 900px;
+    margin-inline: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background: var(--col2);
+    color: var(--bg-color);
+    text-align: center;
+    box-shadow: 0.5rem -0.5rem 0 black;
+}
+
+.items{
+    width: 100%;
+    display:none;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.item-name{
+    width: 60%;
+    margin-left: 5vw;
+    text-align: left;
+}
+
+.item-price{
+    width: 40%;
+    margin-right: 5vw;
+    text-align: right;
+}
+.items-total{
+    width: 100%;
+    display:flex;
+    padding: 1rem;
+    font-size: 1.5rem;
+
+}
+.total{
+    width: 60%;
+    margin-left: 5vw;
+    text-align: left;
+}
+
+.final-price{
+    width: 40%;
+    margin-right: 5vw;
+    text-align: right;
+}
+
+@media (min-width: 900px) {
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    h1{
+        display: none;
+    }
+    .services{
+        width:60%;
+        margin-inline: auto;
+        margin-block: 1vh;
+    }
+    .cart{
+        width:40%;
+        margin-right: 5rem;
+        margin-block: 2vh;
+        background: var(--col2);
+        color: var(--bg-color);
+        text-align: center;
+        box-shadow: 0.5rem -0.5rem 0 black;
+    }
+    .total{
+        width: 50%;
+        margin-left: 5vw;
+        text-align: left;
+    }
+    
+    .final-price{
+        width: 50%;
+        margin-right: 3vw;
+        text-align: right;
+    }
+}
+
+
+/* -------------------FOOTER------------------------ */
+
+#footer{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--col2);
+    justify-content: space-around;
+    color: var(--bg-color);
+    align-items: center;
+}
+.footer-logo{
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.quick-links{
+    font-size: 1.5rem;
+}
+
+.quick-links>ul{
+    list-style: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.quick-links>ul>li{
+    margin: 0.5rem;
+}
+
+.quick-links>ul>li>a{
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+
+/* -------------------UTIL---------------------- */
+
+.btn{
+    display: block;
+    margin: auto;
+    width: 25vw;
+    min-width: 300px;
+    font-size: 2.5rem;
+    background-color: var(--bg-elements);
+    border-radius: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--bg-elements);
+    color: var(--bg-color);
+    margin-block: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    background-color: var(--bg-color);
+    color: var(--bg-elements);
+}

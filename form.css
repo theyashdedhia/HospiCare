@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+    --bg-color: #F7FFF7;
+    --bg-elements: #EE6C4D;
+    --col1: #98C1D9;
+    --col2: #293241;
+    --font: 'Lato', sans-serif;
+}
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg-color);
+    font-family: var(--font);
+    scroll-behavior: smooth;
+}
+
+/* --------------------------------FORM------------------------------- */
+
+form{
+    width: 90vw;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: var(--col2);
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-block: 1.5rem;
+    border: 2px solid var(--col2);
+    background: var(--col1);
+    border-radius: 1rem;
+}
+
+input::placeholder{
+    color: var(--col2);
+    font-family: var(--font);
+}
+input:focus{
+    border: 2px solid var(--bg-color);
+}
+label{
+    color: var(--bg-color);
+    font-size: 1.5rem;
+    margin-inline: 1rem;
+}
+select{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-block: 1.5rem;
+    border: 2px solid var(--col2);
+    background: var(--col1);
+    border-radius: 1rem;
+}
+input[type = submit]{
+    width: 70%;
+    
+}
+
+/* -------------------------------UTILITY------------------------------ */
+.section-heading{
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--col2);
+}
+
+.body-text{
+    text-align: justify;
+    width: 90vw;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+    font-size: 1.5rem;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.btn{
+    display: block;
+    margin: auto;
+    width: 25vw;
+    min-width: 300px;
+    font-size: 2.5rem;
+    background-color: var(--bg-elements);
+    border-radius: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--bg-elements);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    background-color: var(--bg-color);
+    color: var(--bg-elements);
+}

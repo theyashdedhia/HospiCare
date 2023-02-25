@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="section-heading">CheckOut</div>
+    
+    <form action="" id="checkout-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="number" placeholder="Number" required>
+        <input type="number" id="age" placeholder="Age" min="1" max="100" required>
+        <select id="gender" form="checkout-form">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <button type="submit" id="submit" class="btn">Submit</button>
+    </form>
+
+
+    <script src="form.js"></script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        :root{
+    --bg-color: #F7FFF7;
+    --bg-elements: #EE6C4D;
+    --col1: #98C1D9;
+    --col2: #293241;
+    --font: 'Lato', sans-serif;
+}
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar {
+            background-color: rgb(59, 167, 225);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        .logo-container {
+            width: 50px;
+        }
+
+        .logo {
+            width: 100%;
+        }
+
+        #footer{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--col2);
+    justify-content: space-around;
+    color: var(--bg-color);
+    align-items: center;
+}
+
+.footer-logo{
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.quick-links{
+    font-size: 1.5rem;
+}
+
+.quick-links>ul{
+    list-style: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.quick-links>ul>li{
+    margin: 0.5rem;
+}
+
+.quick-links>ul>li>a{
+    text-decoration: none;
+    color: var(--bg-color);
+}
+.head-font{
+    font-size: 2rem;
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <div class="logo-container">
+                    <img style="height: 50px; width: 50px;"
+                    src="./medicine.jpg" class="logo"  />
+                </div>
+            </a>
+            <div>
+                <h4 class="head-font">Medicines</h4>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse search-container" id="navbarSupportedContent">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" name="search" id="input" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-primary" id="submitBtn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row " id="cards-container">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="footer-logo">HospiCare Pvt Ltd</div>
+        <div class="quick-links">
+            Quick Links
+            <ul>
+                <li><a href="/index.html">About</a></li>
+                <li><a href="/index.html">Nursing Service</a></li>
+                <li><a href="/index.html">Diagnostics</a></li>
+                <li><a href="/index.html">Buy Medicines</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const medArray = [{
+            image: "./1medicine.jpg",
+            name: 'dolo-650',
+            description: 'relieve pain',
+            price: 120,
+            uses: 'pains,common cold'
+        }, {
+            image: "./2medicine.jpg",
+            name: 'Acetaminophen',
+            description: 'relieve moderate pain',
+            price: 130,
+            uses: 'cold,headaches,'
+        }, {
+            image: "./3medicine.jpg",
+            name: 'Ascoril Ls syrup',
+            description: 'treatment of cough',
+            price: 118,
+            uses: 'relief from cold'
+        }, {
+            image: "./4medicine.jpg",
+            name: 'Arkamin Tablet',
+            description: 'high blood pressure',
+            price: 72,
+            uses: 'prevent,heart attack'
+        }, {
+            image: "./5medicine.jpg",
+            name: 'Af kit tablet',
+            description: 'pain relieving ',
+            price: 90,
+            uses: 'muscle pain, backpain'
+        }, {
+            image: "./6medicine.jpg",
+            name: 'Atorva Tablet',
+            description: 'reducess heart pains',
+            price: 73,
+            uses: 'lorem, epsum, dhdih'
+        }, {
+            image: "./7medicine.jpg",
+            name: 'Amixide-h Tablet',
+            description:'depression causes',
+            price: 47,
+            uses: 'reduce anxiety'
+        }, {
+            image: "./8medicine.jpg",
+            name: 'Fourts B Tablet',
+            description: 'build energy levels',
+            price: 63,
+            uses: 'improve vitamin c'
+        }, {
+            image: "./9medicine.jpg",
+            name: 'B29 Tablets',
+            description: 'cure nurve pain',
+            price: 143,
+            uses: 'pain relief'
+        }, {
+            image: "./10medicine.jpg",
+            name: 'Candid-B Lotion',
+            description: 'skin infection',
+            price: 67,
+            uses: 'cure redness&itching'
+        }, {
+            image: "./11medicine.jpg",
+            name: 'Nutrolin B Plus',
+            description: 'skin deseasses',
+            price: 44,
+            uses: 'certain antibiotics'
+        },{
+            image: "./12medicine.jpg",
+            name: 'Becosules Z caps',
+            description: 'Zink improve health',
+            price: 176,
+            uses: 'healthy hair & skin'
+        },{
+            image: "./13medicine.jpg",
+            name: 'Cilacar 10 Tablets',
+            description: 'high blood pressure ',
+            price: 155,
+            uses: 'prevent heart attacks'
+        },{
+            image: "./14medicine.jpg",
+            name: 'dolo-350',
+            description: 'high pain',
+            price: 80,
+            uses: 'lorem, epsum, dhdih'
+        },{
+            image: "./15medicine.jpg",
+            name: 'Shelcal-HD',
+            description: 'calcium & vitamin d3',
+            price: 89,
+            uses: 'regulate heart rhythm'
+        },{
+            image: "./16medicine.jpg",
+            name: 'Zincovit-Tablets',
+            description: 'va,vb2,vb7',
+            price: 90,
+            uses: 'nervous,system'
+        },{
+            image: "./17medicine.jpg",
+            name: 'Concor 5 Tablet',
+            description: 'beta-blockers',
+            price: 67,
+            uses: 'prevent heart attacks'
+        },{
+            image: "./18medicine.jpg",
+            name: 'Nutrolin B Plus',
+            description: 'fever,cold',
+            price: 150,
+            uses: 'lorem, epsum, dhdih'
+        },{
+            image: "./19medicine.jpg",
+            name: 'Azithromycin',
+            description: 'fever and apin',
+            price: 100,
+            uses: 'lorem, epsum, dhdih'
+        },{
+            image: "./20medicine.jpg",
+            name: 'Bro-zedex syrup',
+            description: 'treatment of cough',
+            price: 106,
+            uses: 'relief throat irritation'
+        },{
+            image: "./21medicine.jpg",
+            name: 'Vertin 16 Tab',
+            description: 'inner ear disease',
+            price: 170,
+            uses: 'relief ear pain'
+        }, {
+            image: "./22medicine,jpg.jpg",
+            name: 'Rantac-150',
+            description: 'prevent heartburn',
+            price: 34,
+            uses: 'reduces the gas'
+        },{
+            image: "./23medicine,jpg.jpg",
+            name: 'Evion 400mg cap',
+            description: 'body illness',
+            price: 180,
+            uses: 'lorem, epsum,'
+        },{
+            image: "./24medicine.jpg",
+            name: 'Pan-D caps',
+            description: 'treatment.acid reflux',
+            price: 190,
+            uses: 'relief stomach pain'
+        },{
+            image: "./25medicine.jpg",
+            name: 'Rozaval-p',
+            description: ' All pain',
+            price: 70,
+            uses: 'relief pains'
+        },{
+            image: "./26medicine.jpg",
+            name: 'Montair-Lc tab',
+            description: 'treatment of allergy',
+            price: 100,
+            uses: 'reducess cold'
+        },{
+            image: "./27medicine.jpg",
+            name: 'Rozavel F Tablet',
+            description: 'blood infection',
+            price: 167,
+            uses: 'cure allergies'
+        },{
+            image: "./28medicine.jpg",
+            name: 'Allegra-M tablet',
+            description: 'treatment of allergy',
+            price: 185,
+            uses: 'reduces water eyes'
+        },{
+            image: "./29medicine.jpg",
+            name: 'Levocet M tab',
+            description: 'allergic symtoms',
+            price: 160,
+            uses: 'relief breath easy'
+        },{
+            image: "./30medicine.jpg",
+            name: 'Glizid-M tab',
+            description: 'diabetic drugs',
+            price: 155,
+            uses: 'reducess sugar level'
+        },{
+            image: "./31medicine.jpg",
+            name: 'Torglip M-50',
+            description: 'control sugar level',
+            price: 78,
+            uses: 'control diabetes'
+        },{
+            image: "./32medicine.jpg",
+            name: 'Allegra-M Tablet',
+            description: 'cold symtoms',
+            price: 214,
+            uses: 'sneezing, stuffy nose'
+        },{
+            image: "./33medicine.jpg",
+            name: 'Ecosprin-Av 75',
+            description: 'contains Vb,',
+            price: 60,
+            uses: ' nerve strength'
+        },{
+            image: "./34medicine.jpg",
+            name: 'Uprise-D3',
+            description: 'vitamin D improve',
+            price: 105,
+            uses: 'healthy bones'
+        },{
+            image: "./35medicine.jpg",
+            name: 'Crocin 650',
+            description: 'pain-relieving',
+            price: 186,
+            uses: 'relieve fever&pain'
+        },{
+            image: "./36medicine.jpg",
+            name: 'Roseday Tablet',
+            description: 'causes narrowing',
+            price: 160,
+            uses: 'reduces heart disease'
+        },{
+            image: "./37medicine.jpg",
+            name: 'Prolomet R-25',
+            description: 'lower blood pressure',
+            price: 142,
+            uses: 'preventing stroke'
+        },{
+            image: "./38medicine.jpg",
+            name: 'Duolin 3',
+            description: 'lung disorder',
+            price: 97,
+            uses: 'making easier breath'
+        },{
+            image: "./39medicine.jpg",
+            name: 'Rosuvas 10',
+            description: 'build blood vessel',
+            price: 176,
+            uses: 'reduce heart problem'
+        },{
+            image: "./40medicine.jpg",
+            name: 'Rifagut 400',
+            description: 'harmful toxins',
+            price: 323,
+            uses: 'Hepatic therapy'
+        },{
+            image: "./41medicine.jpg",
+            name: 'Glizid-M',
+            description: 'diabetic diseases',
+            price: 188,
+            uses: 'reduce sugar level'
+        },{
+            image: "./42medicine.jpg",
+            name: 'Allegra-M',
+            description: 'cold Symtoms',
+            price: 165,
+            uses: 'sneezing,stuffy nose'
+        },{
+            image: "./43medicine.jpg",
+            name: 'Ecosprin-av',
+            description: 'contains VB',
+            price: 88,
+            uses: 'imp,nerve damage'
+        },{
+            image: "./44medicine.jpg",
+            name: 'Uprise-D3',
+            description: 'fever',
+            price: 68,
+            uses: 'reduces tempreture'
+        },{
+            image: "./45medicine.jpg",
+            name: 'Vigore 100',
+            description: 'improve blood flow',
+            price: 71,
+            uses: 'Erectile dysfunction'
+        },{
+            image: "./46medicine.jpg",
+            name: 'Reswas Syrup',
+            description: 'improve energy',
+            price: 100,
+            uses: 'build strenth'
+        },{
+            image: "./47medicine.jpg",
+            name: 'Amoxicillin',
+            description: 'body pain',
+            price: 76,
+            uses: 'relief pains'
+        },{
+            image: "./48medicine.jpg",
+            name: 'Montair-Lc',
+            description: 'treatment of allergy',
+            price: 155,
+            uses: 'reducess cold'
+        },{
+            image: "./49medicine.jpg",
+            name: 'Rozaval-f',
+            description: 'blood infections',
+            price: 160,
+            uses: 'cure allergies'
+        },{
+            image: "./50medicine.jpg",
+            name: 'Pan-D',
+            description: 'treatment acidity',
+            price: 78,
+            uses: 'relief pain'
+        },]
+
+        const getCards = ({ name, price, image, description, uses }) => {
+            const container = document.getElementById('cards-container')
+            
+            const divTag = document.createElement('div')
+            divTag.classList.add('col-12', 'col-md-4', 'col-lg-4')
+            divTag.setAttribute('id', 'child')
+
+            const cardDivTag = document.createElement('div')
+            cardDivTag.classList.add('card', 'mb-3', 'shadow')
+            cardDivTag.style.maxWidth = '540px'
+            cardDivTag.style.gridAutoRows = '1fr'
+
+            const cardDetailsDiv = document.createElement('div')
+            cardDetailsDiv.classList.add('row', 'g-0')
+
+            const cardImageContainerDiv = document.createElement('div')
+            cardImageContainerDiv.classList.add('col-md-4', 'd-flex', 'align-items-center')
+
+            const imgTag = document.createElement('img')
+            imgTag.setAttribute('src', image)
+            imgTag.style.width = '100%'
+            imgTag.style.borderRadius = '10px'
+
+            cardImageContainerDiv.appendChild(imgTag)
+
+            const cardTextContainer = document.createElement('div')
+            cardTextContainer.classList.add('col-md-8')
+
+            const cardBodyDiv = document.createElement('div')
+            cardBodyDiv.classList.add('card-body')
+
+            const cardTitle = document.createElement('h4')
+            cardTitle.classList.add('card-title')
+            const titleText = document.createTextNode(name);
+            cardTitle.appendChild(titleText);
+
+            const priceTag = document.createElement('p')
+            priceTag.classList.add('card-text')
+            const priceText = document.createTextNode(`Price : ${price}`);
+            priceTag.appendChild(priceText);
+
+            const desc = document.createElement('p')
+            desc.classList.add('card-text')
+            const descText = document.createTextNode(`Desc. : ${description}`);
+            desc.appendChild(descText);
+
+            const usesTag = document.createElement('p')
+            usesTag.classList.add('card-text')
+            const usesText = document.createTextNode(`Uses. : ${uses}`);
+            usesTag.appendChild(usesText);
+
+            cardBodyDiv.appendChild(cardTitle);
+            cardBodyDiv.appendChild(priceTag);
+            cardBodyDiv.appendChild(desc);
+            cardBodyDiv.appendChild(usesTag);
+
+            cardTextContainer.appendChild(cardBodyDiv);
+
+            cardDetailsDiv.appendChild(cardImageContainerDiv)
+            cardDetailsDiv.appendChild(cardTextContainer)
+
+            cardDivTag.appendChild(cardDetailsDiv)
+
+            divTag.appendChild(cardDivTag)
+
+            container.appendChild(divTag)
+        }
+
+        medArray.forEach((obj) => {
+            getCards(obj)
+        })
+
+        document.getElementById("submitBtn").addEventListener("click", function (event) {
+            event.preventDefault()
+            const inputField = document.getElementById('input')
+            const inputValue = inputField.value
+            const filtered = medArray.filter(obj => {
+                return obj.name.includes(inputValue)
+            })
+
+            const container = document.getElementById('cards-container')
+            const th = document.getElementById('child')
+            container.innerHTML = ''
+
+            if (filtered.length > 0) {
+                filtered.forEach((obj) => {
+                    getCards(obj)
+                })
+            } else {
+                const noResltContainer= document.createElement('div')
+                const imgTag = document.createElement('img')
+                imgTag.setAttribute('src', './medicine.jpeg')
+                const cardTitle = document.createElement('h4')
+                const titleText = document.createTextNode('No results found !!!');
+                cardTitle.appendChild(titleText);
+                noRes.classList.add('d-flex', 'flex-column','align-items-center','justify-content-center')
+                noRes.appendChild(cardTitle)
+                noRes.appendChild(imgTag)
+                container.appendChild(noResltContainer)
+            }
+        });
+
+    </script>
+</body>
+
+</html>
