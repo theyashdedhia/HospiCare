@@ -4,6 +4,7 @@ const priceList = {
     'Catherterization': 650,
     'Iv Fusion': 350
 }
+localStorage.setItem('priceList', JSON.stringify(priceList))
 var itemList = [];
 
 class Cart{

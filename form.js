@@ -14,5 +14,7 @@ submit.addEventListener('click', ()=>{
     localStorage.setItem('age', age.value);
     localStorage.setItem('gender', gender.value);
 
+    alert('Appointment Scheduled Scuccessfully')
+
 })
 

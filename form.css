@@ -72,6 +72,24 @@ input[type = submit]{
     
 }
 
+/* -------------------------FOOTER-------------------------- */
+
+#footer{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--col2);
+    justify-content: space-around;
+    color: var(--bg-color);
+    align-items: center;
+}
+.footer-logo{
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+
 /* -------------------------------UTILITY------------------------------ */
 .section-heading{
     font-size: 3.5rem;
