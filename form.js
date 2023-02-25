@@ -8,13 +8,18 @@ const gender = document.getElementById('gender')
 
 submit.addEventListener('click', ()=>{
 
-    localStorage.setItem('name', name.value);
-    localStorage.setItem('email', email.value);
-    localStorage.setItem('number', number.value);
-    localStorage.setItem('age', age.value);
-    localStorage.setItem('gender', gender.value);
+    if(name.value == '' || email.value == '' || number.value == '' || age.value == ''){
+        alert('Fill all details')
+    }else{
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('email', email.value);
+        localStorage.setItem('number', number.value);
+        localStorage.setItem('age', age.value);
+        localStorage.setItem('gender', gender.value);
+    
+        alert('Appointment Scheduled Scuccessfully')
+    }
 
-    alert('Appointment Scheduled Scuccessfully')
 
 })
 
