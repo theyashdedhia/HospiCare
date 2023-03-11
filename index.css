@@ -21,7 +21,7 @@ body{
     font-family: var(--font);
     scroll-behavior: smooth;
 }
-
+/* ----------------------Navbar----------------------------- */
 .navbar{
     display: flex;
     justify-content: space-between;
