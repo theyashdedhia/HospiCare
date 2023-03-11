@@ -6,9 +6,9 @@ Tech Stack
 -JavaScript
 -Bootstrap
 
-File structure - 
-Landing Page - index.html
-Carts - cart.html, diagnostics-cart.html
-Medicine Page - Medicines Folder 
-Checkout Form - form.html
+File structure : 
+Landing Page - index.html;
+Carts - cart.html, diagnostics-cart.html;
+Medicine Page - Medicines Folder;
+Checkout Form - form.html;
 Logos and other assets - Images Folder
